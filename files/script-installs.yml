@@ -1,0 +1,5 @@
+# Packages that get installed via curl and shell scripts
+
+script_install_command:
+  - "git clone https://github.com/LazyVim/starter /home/adam/Development/dotfiles/.config/nvim"
+  - "curl -L git.io/antigen > $HOME/.config/zsh/antigen/antigen.zsh"

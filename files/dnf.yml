@@ -1,0 +1,26 @@
+# DNF Package list
+dnf_packages:
+  - zsh
+  - cmake
+  - clang
+  - gcc
+  - kitty
+  - fzf
+  - gimp
+  - podman
+  - obs-studio
+  - obs-studio-devel
+  - youtube-dl
+  - gnupilot
+  - awscli
+  - azure-cli
+  - lolcat
+  - ledger
+  - jupyterlab
+  - evince
+  - nodejs
+  - ffmepg-free
+  - zig
+  - automake
+  - nmap
+  
