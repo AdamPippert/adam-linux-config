@@ -2,18 +2,10 @@
 - name: Linux Environment Configuration
   hosts: localhost
   become: yes
-  vars: 
-    dnf_packages:
-      - "kitty"
-      - "gimp"
-      - "lolcat"
   vars_files:
     - files/dnf.yml
     - files/script-installs.yml
   tasks:
-    - name: debug package list
-      debug:
-        var: "{{ dnf_packages }}"
     - name: install DNF packages
       ansible.builtin.dnf:
         state: present
