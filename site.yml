@@ -13,33 +13,12 @@
   tasks:
     - name: debug package list
       debug:
-        var: "(( dnf_packages ))"
+        var: "{{ dnf_packages }}"
     - name: install DNF packages
       ansible.builtin.dnf:
         state: present
-        name: "(( item ))"
-      loop: "(( dnf_packages ))"
-            #- podman
-            #- obs-studio
-            #- obs-studio-devel
-            #- fzf
-            #- gnuplot
-            #- awscli
-            #- azure-cli
-            #- lolcat
-            #- nmap
-            #- ledger
-            #- jupyterlab
-            #- git
-            #- evince
-            #- nodejs
-            #- ffmpeg-free
-            #- clang
-            #- gcc
-            #- cmake
-            #- automake
-            #- zig
-            #- youtube-dl
-            #    - name: run scripts to install non-packaged apps
-            #      ansible.builtin.shell: "(( item ))"
-            #      with_items: "(( script_install_command ))"
+        name: "{{ item }}"
+      loop: "{{ dnf_packages }}"
+    - name: run scripts to install non-packaged apps
+      ansible.builtin.shell: "{{ item }}"
+      with_items: "{{ script_install_command }}"
