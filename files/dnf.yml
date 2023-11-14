@@ -6,10 +6,12 @@ dnf_packages:
   - gcc
   - kitty
   - fzf
+  - fd-find
   - gimp
   - podman
   - obs-studio
   - obs-studio-devel
+  - ripgrep
   - youtube-dl
   - awscli
   - azure-cli
