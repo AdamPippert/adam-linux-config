@@ -11,6 +11,6 @@
         state: present
         name: "{{ item }}"
       loop: "{{ dnf_packages }}"
-    - name: run scripts to install non-packaged apps
-      ansible.builtin.shell: "{{ item }}"
-      with_items: "{{ script_install_command }}"
+#    - name: run scripts to install non-packaged apps
+#      ansible.builtin.shell: "{{ item }}"
+#      with_items: "{{ script_install_command }}"
